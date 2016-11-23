@@ -9,7 +9,7 @@ var session = require('express-session');
 bcrypt = require('bcrypt-nodejs');
 
 var nodemailer = require('nodemailer');
-transporter = nodemailer.createTransport('smtps://@smtp.mail.yahoo.com');
+transporter = nodemailer.createTransport('smtps://theoutcast92%40yahoo.com:01091992Abc!@smtp.mail.yahoo.com');
 
 //create express app
 var app = express();
