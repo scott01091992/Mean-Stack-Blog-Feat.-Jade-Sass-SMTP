@@ -1,0 +1,17 @@
+div#register-overlay(ng-controller='modal-controller')
+    div.modal
+        form.register-form
+            div.closemodal(ng-click='showregister()') X
+            h3 Register form
+            span.error {{register.errors}}
+            span.success {{register.success}}
+            label Name:
+            input(type='text' ng-model='register.name')
+            label Email:
+            input(type='email' ng-model='register.email')
+            label Password: 
+            input(type='password' ng-model='register.password')
+            label Confirm Password:
+            input(type='password' ng-model='register.confirm')
+            button(ng-click='register_user()') Register
+             

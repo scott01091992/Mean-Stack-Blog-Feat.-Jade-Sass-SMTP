@@ -1,0 +1,54 @@
+div.container(ng-controller='video-controller')
+    include partials/header
+    include partials/nav       
+    div.video-container(ng-repeat='video in videos track by $index')
+        h2 {{video.title}} - {{video.createdAt | formatDate}}
+        div.content
+            iframe(ng-src="{{video.media | trusted}}", frameborder="0", allowfullscreen)
+            div.description {{video.description}}
+        
+        div.comment-container
+            div.comment 
+                div.links
+                    ul
+                        li(ng-repeat = 'tag in video.tags') {{tag}}
+                    div.social
+                        a(target='_self' ng-href='https://www.facebook.com/profile.php?id=100013752600779')
+                            img(ng-src='./../assets/Images/Facebook.png')
+                        a(target='_self' ng-href='https://plus.google.com/u/0/105587998756561757212')
+                            img(ng-src='./../assets/Images/Google.png')
+                        a(target='_self' ng-href='https://www.linkedin.com/in/brandon-scott-734844106')
+                            img(ng-src='./../assets/Images/Linkedin.png')
+                        a(target='_self' ng-href='https://www.pinterest.com/scott01091992/')
+                            img(ng-src='./../assets/Images/Pintrest.png')
+                        a(target='_self' ng-href='https://twitter.com/01091992Brandon')
+                            img(ng-src='./../assets/Images/Twitter.png')
+                form.comment-form
+                    label Comment
+                    textarea(ng-model='video.comment') 
+                    button(ng-disabled="loggedin == null" ng-class="{ true: 'tooltip' }[loggedin == null]" title="Must be signed in to leave a comment" ng-click='submitComment(video._id, $index)') Submit
+                h3(ng-click='show_comments($index)') Show Comments
+                div.commentsContainer(ng-class="{ true: 'hide' }[video.commentDisplay != true]")
+                    div.comments(ng-repeat='comment in video._comments track by $index')
+                        h4 #[span.username {{comment.username}}] - #[span.datetime {{comment.createdAt | formatDate}}]
+                        p {{comment.comment}}
+                        div.actions
+                            img(ng-src='./../assets/Images/replyarrow.svg')
+                            a.reply(ng-class="{ true: 'tooltip'}[loggedin == null]" title="Must be signed in to reply" ng-click='show_form($parent.$index, $index)') Reply
+                            img(ng-src='./../assets/Images/checkmark.svg')
+                            a.like(ng-class="{ true: 'tooltip'}[loggedin == null]" title="Must be signed in to like this" ng-click='like_comment(comment._id, $parent.$index, $index)') Like {{comment.likes}} 
+                            img(ng-src='./../assets/Images/x.svg')
+                            a.dislike(ng-class="{ true: 'tooltip'}[loggedin == null]" title="Must be signed in to dislike this" ng-click='dislike_comment(comment._id, $parent.$index, $index)') Dislike {{comment.dislikes}}
+                            a.show(ng-click='show_replies($parent.$index, $index)') Show Replies
+                            div.replyContainer(ng-class="{ true: 'hide' }[comment.replyDisplay != true]")
+                                div.replies(ng-repeat='reply in comment._replies')
+                                    h4 #[span.username {{reply.username}}] - #[span.datetime {{reply.createdAt | formatDate}}]
+                                    p {{reply.reply}}
+                        form.reply-form(ng-class="{ true: 'hide' }[comment.formDisplay != true]")
+                            label Reply
+                            textarea(ng-model='comment.reply') 
+                            button(ng-class="{ true: 'tooltip' }[loggedin == null]" title="Must be signed in to leave a reply" ng-disabled="loggedin == null" ng-click='submitReply(comment._id, $parent.$index, $index)') Submit
+                        hr
+    include partials/footer
+    include partials/login
+    include partials/register

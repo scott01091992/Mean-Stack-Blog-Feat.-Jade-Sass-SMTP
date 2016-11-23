@@ -1,0 +1,44 @@
+h1 Developer Tool
+h3 Add artboard
+
+div(ng-controller='dev-controller')
+    form
+        label title
+        input(type='text' ng-model='artboardtitle')
+        label imgUrl
+        input(type='text' ng-model='artboardimage')
+        label description
+        textarea(cols='4' ng-model='artboarddescription')
+        label tags
+        input(type='text' ng-model='artboardtags')
+        button(ng-click='createArtboard()') submit
+        
+h3 Add video
+
+div(ng-controller='dev-controller')
+    form
+        label title
+        input(type='text' ng-model='videotitle')
+        label videoUrl
+        input(type='text' ng-model='videourl')
+        label description
+        textarea(cols='4' ng-model='videodescription')
+        label tags
+        input(type='text' ng-model='videotags')
+        button(ng-click='createVideo()') submit
+        
+h3 Add Quote
+
+div(ng-controller='dev-controller')
+    form
+        label Quote
+        input(type='text' ng-model='quote')
+        button(ng-click='createQuote()') create
+        
+h3 Upcoming content
+
+div(ng-controller='dev-controller')
+    form
+        label Array of Upcoming content
+        input(type='text' ng-model='upcoming')
+        button(ng-click='createUpcomingArray()') create

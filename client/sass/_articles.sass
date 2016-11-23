@@ -1,0 +1,122 @@
+//ARTBOARD PAGE
+.artboard-container
+    padding: 1em
+    border-right: 2px solid $dark-orange
+    h2
+        display: block
+    //ARTBOARD
+    .content
+        height: auto
+        position: relative
+        line-height: 1.3em
+        min-height: 35em
+        img
+            max-width: 70%
+            margin: 0 1em 1em 0
+            float: left
+            box-shadow: 0 0 .2em .03em
+            background-color: $grey
+        .description
+            width: 25%
+            padding: 0 1em
+            font-size: 12px
+            line-height: 1.5em
+            overflow-y: scroll
+    //LINKS
+    .comment-container
+        font-size: 14px
+        .comment
+            .links
+                ul
+                    display: inline-block
+                    -webkit-padding-start: 0
+                    vertical-align: bottom
+                    width: 60%
+                    li
+                        display: inline-block
+                        margin-right: 1em
+                        color: #b3b3b3
+                        text-transform: uppercase
+
+                .social
+                    width: 40%
+                    text-align: right
+                    display: inline-block
+                    float: right
+                    img
+                        padding: 1em .5em
+                        height: 2em
+                        width: 2em
+                        cursor: pointer
+            //COMMENT FORM
+            .comment-form
+                label
+                    font-size: 1.2em
+                textarea
+                    width: 50%
+                button
+            h3
+                text-decoration: underline
+                -webkit-margin-before: 0
+                cursor: pointer
+                margin-top: 1em
+            //COMMENTS
+            .commentsContainer
+                .comments
+                    h4
+                        -webkit-margin-after: 0
+                        color: $grey-blue
+                        .username
+                            text-transform: uppercase
+                        .datetime
+                            font-size: .8em
+                    p
+                        font-family: "Helvetica"
+                        -webkit-margin-before: .7em
+                        -webkit-margin-after: .7em
+                        font-size: 13px
+                        line-height: 1.5em
+                        padding: 0 0 0 3em
+                    .actions
+                        img
+                            width: .75em
+                            padding: 0 .2em 0 0
+                        .reply
+                            margin-right: 1em
+                            cursor: pointer
+                            color: $grey-blue
+                        .like
+                            margin-right: 1em
+                            cursor: pointer
+                            color: $grey-blue
+                        .dislike
+                            cursor: pointer
+                            color: $grey-blue
+                        .show
+                            float: right
+                            cursor: pointer
+                            color: $grey-blue
+                        //REPLIES
+                        .replyContainer
+                            .replies
+                                margin-left: 5em
+                                h4
+                                    -webkit-margin-after: 0
+                                    color: $grey-blue
+                                    .username
+                                        text-transform: uppercase
+                                    .datetime
+                                        font-size: .8em
+                                p
+                                    font-family: "Helvetica"
+                                    -webkit-margin-before: .7em
+                                    -webkit-margin-after: .7em
+                                    font-size: 13px
+                                    line-height: 1.5em
+                                    padding: 0 0 0 3em
+                    //REPLY FORM
+                    .reply-form
+                        margin-top: 1em
+                        label
+                        textarea
+                        button

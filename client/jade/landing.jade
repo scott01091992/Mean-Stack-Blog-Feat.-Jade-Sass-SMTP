@@ -1,0 +1,28 @@
+div.container(ng-controller='home-controller')
+    include partials/header
+    include partials/nav       
+    div
+        main.col-70
+            h3.hello Hello!
+            p.welcome Welcome to my blog, my name is Brandon. I spend my time learning about business, design, development and everything inbetween. I made this a place to share my exploration and condense what I learn into articles people may find useful. Enjoy!
+            h3 Video of the Week
+            iframe(width="853", height="480", ng-src="{{video.media | trusted}}", frameborder="0", allowfullscreen)
+            a(href='#/videos') Read More
+            
+            div.artboard-summary
+                h3 {{board.title}} - {{board.createdAt}}
+                div.content
+                    img(ng-src='{{board.imgUrl}}')
+                    a(href='#/articles') Read More
+                    
+        aside.col-30
+            h4 Upcoming Content
+            ul
+                li(ng-repeat='up in upcoming.content') {{up}}
+            h4 Quote of the Week
+            p.quote "{{quote.quote}}"
+            
+        hr
+    include partials/footer
+    include partials/login
+    include partials/register

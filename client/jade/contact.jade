@@ -1,0 +1,38 @@
+div.container(ng-controller='contact-controller')
+    include partials/header
+    include partials/nav       
+    
+    div.contact-header
+        h2 &ldquo; Send me a message, can't wait to hear from you &rdquo;
+        
+    div.contact-form
+        label.success {{success_message}}
+        label Name: #[span.error {{name_error}}]
+        input(type='text' name='name' ng-model='name')
+        label Subject: #[span.error {{subject_error}}]
+        input(type='text' name='subject' ng-model='subject')
+        label Email: #[span.error {{email_error}}]
+        input(type='email' name='email' ng-model='email')
+        label Message: #[span.error {{message_error}}]
+        textarea(ng-model='message')
+        button(ng-click='send_message()') Send
+        
+    div.contact-links
+        a(target='_self' ng-href='https://www.facebook.com/profile.php?id=100013752600779')
+            img(src='./../assets/Images/Facebook.png')
+        a(target='_self' ng-href='https://plus.google.com/u/0/105587998756561757212')
+            img(src='./../assets/Images/Google.png')
+        a(target='_self' ng-href='https://www.linkedin.com/in/brandon-scott-734844106')
+            img(src='./../assets/Images/Linkedin.png')
+        a(target='_self' ng-href='https://www.pinterest.com/scott01091992/')
+            img(src='./../assets/Images/Pintrest.png')
+        a(target='_self' ng-href='https://twitter.com/01091992Brandon')
+            img(src='./../assets/Images/Twitter.png')
+        
+    div.extra-links
+        a(ng-href='http://brandonscottdev.com') My portfolio Site
+        
+    hr
+    include partials/footer
+    include partials/login
+    include partials/register

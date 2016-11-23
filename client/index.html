@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Showcase for Brandon Scott's work.">
+		<meta name="keywords" content="Brandon, Scott, Portfolio, HTML5, CSS3, Bootstrap, JavaScript, Angular, MEAN, LAMP, Web, Developer, Designer, SQL, PHP, Photoshop, Illustrator">
+		<meta name="author" content="Brandon Scott">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Brandon's Portfolio</title>
+		<link rel='stylesheet' href='./css/styles.css'>
+		<script type="text/javascript" src='./js/frameworks/angular.min.js'></script>
+		<script type="text/javascript" src='./js/frameworks/angular-route.js'></script>
+		<script type="text/javascript" src='./js/frameworks/jquery-2.2.0.min.js'></script>
+		<script>
+			var myApp = angular.module('myApp', ['ngRoute']);
+		</script>
+	</head>
+	<body ng-app='myApp'>
+		<div ng-view=''>
+		</div>
+	</body>
+	<script type="text/javascript" src='./js/routes.js'></script>
+	<script type="text/javascript" src='./js/controllers/home.controller.js'></script>
+	<script type="text/javascript" src='./js/controllers/video.controller.js'></script>
+	<script type="text/javascript" src='./js/controllers/articles.controller.js'></script>
+	<script type="text/javascript" src='./js/controllers/modal.controller.js'></script>
+	<script type="text/javascript" src='./js/controllers/contact.controller.js'></script>
+	<script type="text/javascript" src='./js/controllers/dev.controller.js'></script>
+	<script type="text/javascript" src='./js/factories/artboard.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/user.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/upcoming.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/quote.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/comment.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/video.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/reply.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/dev.factory.js'></script>
+	<script type="text/javascript" src='./js/factories/message.factory.js'></script>
+	<script type="text/javascript" src='./js/service/source.service.js'></script>
+	<script type="text/javascript" src='./js/frameworks/functions.js'></script>
+
+</html>
