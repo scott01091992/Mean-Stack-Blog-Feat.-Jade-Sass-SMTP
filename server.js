@@ -30,7 +30,7 @@ app.use(session({
 require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
-//listen on port 6777
-app.listen(6777, function(){
+//listen on port 8000
+app.listen(8000, function(){
 
 });

@@ -1,6 +1,6 @@
 {
-  "name": "mean-belt-express",
-  "description": "belt exam for brandon s",
+  "name": "Brandons Blog",
+  "description": "Blog about technology development and creativity",
   "engines": {
     "node": "v4.4.5",
     "npm": "2.15.5"
