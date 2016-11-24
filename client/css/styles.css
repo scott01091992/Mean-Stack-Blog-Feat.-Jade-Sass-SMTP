@@ -446,7 +446,7 @@ footer p {
     line-height: 1.3em;
     min-height: 35em; }
     .artboard-container .content img {
-      max-width: 50%;
+      max-width: 70%;
       margin: 0 1em 1em 0;
       float: left;
       box-shadow: 0 0 .2em .03em;
@@ -541,7 +541,7 @@ footer p {
 
 @media screen and (max-width: 1200px) {
   .artboard-container .content img {
-    max-width: 70%;
+    max-width: 90%;
     height: auto;
     display: block;
     float: none; }
@@ -614,8 +614,6 @@ footer p {
     font-size: 1.2em; } }
 
 @media screen and (max-width: 640px) {
-  .artboard-container .content img {
-    max-width: 90%; }
   header {
     font-size: 11px; }
     header div button {
