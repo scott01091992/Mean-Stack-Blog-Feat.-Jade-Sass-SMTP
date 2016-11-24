@@ -6,7 +6,7 @@ div#login-overlay(ng-controller='modal-controller')
             span.success {{login.success}}
             span.error {{login.error}}
             label Email:
-            input(type='text' ng-model='login.email')
+            input(type='email' ng-model='login.email')
             label Password: 
             input(type='password' ng-model='login.password')
             button(ng-click='login_user()') Login 
