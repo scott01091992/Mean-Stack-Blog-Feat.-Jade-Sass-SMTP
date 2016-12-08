@@ -14,10 +14,10 @@ module.exports = function(app){
     app.post('/login', user.login);
     app.post('/comment', comment.create);
     app.post('/reply', reply.create);
-    // app.post('/dev/artboard', artboard.create);
-    // app.post('/dev/video', video.create);
-    // app.post('/dev/quote', quote.create);
-    // app.post('/dev/upcoming', upcoming.create);
+    app.post('/dev/artboard', artboard.create);
+    app.post('/dev/video', video.create);
+    app.post('/dev/quote', quote.create);
+    app.post('/dev/upcoming', upcoming.create);
     app.post('/dislike', comment.dislike);
     app.post('/like', comment.like);
     app.get('/artboards', artboard.index);

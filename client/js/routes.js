@@ -18,9 +18,9 @@ myApp.config(function ($routeProvider){
     .when('/videos',{
       templateUrl: '../partials/video.html'
     })
-    // .when('/dev', {
-    //     templateUrl: '../partials/dev.html'
-    // })
+    .when('/dev', {
+        templateUrl: '../partials/dev.html'
+    })
     .otherwise({
       redirectTo: '/'
     })

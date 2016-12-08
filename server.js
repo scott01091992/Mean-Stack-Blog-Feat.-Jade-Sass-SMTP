@@ -1,4 +1,4 @@
-//express server\
+//express server
 
 //get modules
 var express = require('express');
@@ -31,6 +31,6 @@ require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
 //listen on port 8000
-app.listen(8000, function(){
+app.listen(6789, function(){
 
 });
