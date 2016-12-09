@@ -31,6 +31,6 @@ require('./server/config/mongoose.js');
 require('./server/config/routes.js')(app);
 
 //listen on port 8000
-app.listen(6789, function(){
+app.listen(8000, function(){
 
 });
