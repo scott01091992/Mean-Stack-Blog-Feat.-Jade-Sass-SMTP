@@ -15,7 +15,7 @@ formatDate = function(date){
         "December"
     ];
     dateString = "";
-    dateString += months[splitDate[1]];
+    dateString += months[splitDate[1]-1];
     dateString += " ";
     if(splitDate[2] == 1){
         dateString += "1st";
